@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPortfolio</title>
+    <link rel="icon" href="Images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Teddy Robson</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="">Curriculo</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="https://github.com/Teddy-Junior" target="_blank">GitHub</a></li>
+                        <li><a href="javascript:void(0)" id="contato-link">Contato</a></li>
+                    </ul>
+                </nav>
+                <div id="imageModal" class="modal">
+                    <span class="close" id="closeModal">&times;</span>
+                    <a href="https://wa.me/5516997650661?text=Estou%20Sempre%20Disponivel%20:D" target="_blank">
+                        <img class="modal-content" id="modalImage">
+                    </a>
+                </div>
+            </header>
+            <div class="container">
+                <div class="pic">
+                    <img src="images/pp.jpg" alt="Profile Picture">
+                </div>
+                <div class="profile_text">
+                    <h5>Olá, eu desejo ser um <span class="input">Frontend Developer</span></h5>
+                    <h1>Teddy Robson</h1>
+                    <p>Estou a procura de um trabalho para melhorar e colocar em pratica meus conhecimentos adquiridos com cursos e projetos utilizando tecnologias atuais baseados em Frontend.
+                        Adquiri grande capacidade de resolver conflitos e trabalho em equipe com trabalhos na faculdade e no tempo de estagio
+                        </p>
+                    
+                    <div class="btn-group">
+                        <a href="Images/Curriculo.docx" download="Curriculo" class="btn active">Download CV</a>
+                        <a href= "https://wa.me/5516997650661?text=Estou%20Sempre%20Disponivel%20:D" target="_blank" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        
+                        <a href="https://www.linkedin.com/in/teddy-robson-batista-junior-17a0841a3/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://wa.me/5516997650661?text=Estou%20Sempre%20Disponivel%20:D" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://github.com/Teddy-Junior" target="_blank"><i class="fa-brands fa fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section_ling">
+            <h2>Tecnologias que Tive Contato</h2>
+            <div class="ling-container">
+                <div class="ling-icon">
+                    <img src="Images/html.png" alt="Icone do HTML">
+                </div>
+                <div class="ling-icon">
+                    <img src="Images/css.png" alt="Icone do CSS">
+                </div>
+                <div class="ling-icon">
+                    <img src="Images/JavaScript.png" alt="Icone do JavaScript">
+                </div>
+                <div class="ling-icon">
+                    <img src="Images/nodejs.png" alt="Icone do Node.js">
+                </div>
+                <div class="ling-icon">
+                    <img src="Images/api.jpg" alt="Icone do API">
+                </div>
+                <div class="ling-icon">
+                    <img src="Images/delphi.png" alt="Icone do Delphi">
+                </div>
+                <div class="ling-icon">
+                    <img src="Images/mysql.png" alt="Icone do MySQl">
+                </div>
+                <div class="ling-icon">
+                    <img src="Images/switf.png" alt="Icone do Swift">
+                </div>
+            </div>
+        </div>
+        <section class="projects">
+            <h2 id="projetos"><u>Projetos</u></h2>
+            <div class="project-cards">
+                <div class="card">
+                    <img src="Images/pokemon.png" alt="Project 2">
+                    <h3>Pokedex Pokemon</h3>
+                    <p>Saindo a procura de Projetos Frontend com contato com API's e Node.js, criei este divertido projeto</p>
+                    <a href="#" class="btn">Ver mais</a>
+                </div>
+                <div class="card">
+                    <img src="Images/mhw.jpg" alt="Project 1">
+                    <h3>Bestiario Monster Hunter</h3>
+                    <p>Inspirado na API Pokedex, criei este projeto original de um Bestiario do jogo Monster Hunter World</p>
+                    <a href="#" class="btn">Ver mais</a>
+                </div>
+                <div class="card">
+                    <img src="Images/switf.png" alt="Project 3">
+                    <h3>Xilofone Swift</h3>
+                    <p>Ao começar os estudos em Swift, este foi um dos projetos realizados.</p>
+                    <a href="#" class="btn">Ver mais</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js">      
+    </script>
+    <script>
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Fullstack Developer", "Frontend Developer", "Web Developer", "Fullstack Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+    function scrollToProjetos() {
+        const element = document.querySelector('u');
+        if (element && element.textContent === 'Projetos') {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const curriculoLink = document.querySelector('a[href=""]');
+        const downloadBtn = document.querySelector('.btn.active');
+
+        curriculoLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            downloadBtn.classList.toggle('border-change');
+        });
+    });
+
+    document.getElementById('contato-link').addEventListener('click', function() {
+    var modal = document.getElementById('imageModal');
+    var modalImg = document.getElementById('modalImage');
+    var captionText = document.getElementById('caption');
+
+    modal.style.display = "block";
+    modalImg.src = 'Images/card.PNG'; 
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+    var modal = document.getElementById('imageModal');
+    modal.style.display = "none";
+});
+
+window.onclick = function(event) {
+    var modal = document.getElementById('imageModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+    </script>
+</body>
+</html>
